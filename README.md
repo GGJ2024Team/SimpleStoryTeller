@@ -21,9 +21,14 @@
 
 1.将源代码下载到本地
 
-2.从云盘中下载Assets.zip，解压后放到项目根目录下, 文件夹结构如图所示
+2.从云盘中下载Assets.zip
+
+链接：https://share.weiyun.com/vY5FVIdb 密码：fqrcuk
+
+解压后放到项目根目录下, 文件夹结构如图所示
+
 ```bash
-├─Assets # 素材文件
+├─Assets # 素材文件夹
 │  ├─Effects
 │  │  └─Emojis
 │  ├─Fonts
@@ -105,11 +110,6 @@ func _update_attr(scene_objects):
 - 函数和变量用小写单词下划线分割命名, 例如 `func check_game_finish() -> bool: `
 - 名字必须有实际含义
 - 图像等素材都放在`Assets`文件夹中
-
-
-![](https://github.com/GKFXCode/SimpleStoryTeller/blob/master/Assets/Readme/classes.drawio.png)
-
-![](../img/classes.drawio-1706007767746.png)
 
 
 ### THANKS
