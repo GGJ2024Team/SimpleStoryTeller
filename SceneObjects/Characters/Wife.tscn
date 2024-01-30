@@ -1,0 +1,156 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://SceneObjects/Characters/Wife.gd" type="Script" id=1]
+[ext_resource path="res://SceneObjects/Characters/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/SceneObjects/Characters/wife.png" type="Texture" id=3]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F0.png" type="Texture" id=4]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F3.png" type="Texture" id=5]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F4.png" type="Texture" id=6]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F5.png" type="Texture" id=7]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F6.png" type="Texture" id=8]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F7.png" type="Texture" id=10]
+[ext_resource path="res://Assets/SceneObjects/Characters/angry_woman/F1.png" type="Texture" id=11]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F0.png" type="Texture" id=12]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F14.png" type="Texture" id=13]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F4.png" type="Texture" id=14]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F8.png" type="Texture" id=15]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F5.png" type="Texture" id=16]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F2.png" type="Texture" id=17]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F9.png" type="Texture" id=18]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F3.png" type="Texture" id=19]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F6.png" type="Texture" id=20]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F10.png" type="Texture" id=21]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F12.png" type="Texture" id=22]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F11.png" type="Texture" id=23]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F13.png" type="Texture" id=24]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F1.png" type="Texture" id=25]
+[ext_resource path="res://Assets/SceneObjects/Characters/hug/F7.png" type="Texture" id=26]
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 100, 150 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ SubResource( 4 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "angry",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 25 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 26 ), ExtResource( 15 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "hug",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "angry" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "angry_woman"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "angry" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "hug"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "hug" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 25.0
+height = 88.0
+
+[node name="Wife" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+obj_name = "Wife"
+
+[node name="AnimatedSprite" parent="." index="0"]
+position = Vector2( 0, 3 )
+frames = SubResource( 2 )
+animation = "angry"
+
+[node name="AnimationPlayer" parent="." index="1"]
+anims/RESET = SubResource( 5 )
+anims/angry_woman = SubResource( 6 )
+anims/hug = SubResource( 7 )
+
+[node name="CollisionShape" parent="." index="2"]
+position = Vector2( 0, 6 )
+shape = SubResource( 3 )

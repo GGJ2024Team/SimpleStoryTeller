@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Anchor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://SceneObjects/Items/Cactus.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Scenes/company.png" type="Texture" id=4]
+[ext_resource path="res://SceneObjects/Items/Spider.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SceneObjects/Items/Boss.tscn" type="PackedScene" id=6]
+
+[node name="Company" instance=ExtResource( 2 )]
+scene_name = "Company"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 4 )
+
+[node name="Anchor2" parent="Anchors" index="0" instance=ExtResource( 1 )]
+position = Vector2( 193, 238 )
+
+[node name="Anchor3" parent="Anchors" index="1" instance=ExtResource( 1 )]
+position = Vector2( 495, 180 )
+
+[node name="Cactus" parent="Anchors/Anchor3" index="1" instance=ExtResource( 3 )]
+position = Vector2( 2, 7 )
+
+[node name="Anchor4" parent="Anchors" index="2" instance=ExtResource( 1 )]
+position = Vector2( 355, 34 )
+
+[node name="Spider" parent="Anchors/Anchor4" index="1" instance=ExtResource( 5 )]
+position = Vector2( -1, -2 )
+
+[node name="Anchor5" parent="Anchors" index="3" instance=ExtResource( 1 )]
+position = Vector2( 418, 241 )
+
+[node name="Boss" parent="Anchors/Anchor5" index="1" instance=ExtResource( 6 )]
+scale = Vector2( 1.02984, 1 )
+
+[node name="Label" type="Label" parent="." index="2"]
+visible = false
+margin_left = 183.0
+margin_top = 115.0
+margin_right = 355.0
+margin_bottom = 208.0

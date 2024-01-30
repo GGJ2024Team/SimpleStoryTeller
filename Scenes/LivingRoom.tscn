@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Anchor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Scenes/客厅.png" type="Texture" id=3]
+[ext_resource path="res://SceneObjects/Items/TV.tscn" type="PackedScene" id=4]
+
+[node name="LivingRoom" instance=ExtResource( 2 )]
+scene_name = "LivingRoom"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 3 )
+
+[node name="Anchor" parent="Anchors" index="0" instance=ExtResource( 1 )]
+position = Vector2( 142, 212 )
+
+[node name="Anchor2" parent="Anchors" index="1" instance=ExtResource( 1 )]
+position = Vector2( 427, 240 )
+
+[node name="TVPos" parent="Anchors" index="2" instance=ExtResource( 1 )]
+position = Vector2( 427, 240 )
+
+[node name="TV" parent="Anchors/TVPos" index="1" instance=ExtResource( 4 )]
+position = Vector2( -156, -46 )

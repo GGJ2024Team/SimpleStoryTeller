@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Stage.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Anchor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://SceneObjects/Items/Clock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Scenes/Stage.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Rainmove.gd" type="Script" id=6]
+[ext_resource path="res://Effects/DumplingRain.tscn" type="PackedScene" id=7]
+
+[node name="Stage" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+scene_name = "Stage"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 5 )
+
+[node name="UpPos" parent="Anchors" index="0" instance=ExtResource( 3 )]
+position = Vector2( 273, 79 )
+
+[node name="DownPos" parent="Anchors" index="1" instance=ExtResource( 3 )]
+position = Vector2( 271, 244 )
+
+[node name="ClockPos" parent="Anchors" index="2" instance=ExtResource( 3 )]
+position = Vector2( 500, 95 )
+
+[node name="Clock" parent="Anchors/ClockPos" index="1" instance=ExtResource( 4 )]
+
+[node name="RainSet" type="Node2D" parent="." index="2"]
+
+[node name="Rain1" type="Node2D" parent="RainSet" index="0"]
+position = Vector2( 20, -10 )
+script = ExtResource( 6 )
+
+[node name="DumplingRain" parent="RainSet/Rain1" index="0" instance=ExtResource( 7 )]
+
+[node name="Rain2" type="Node2D" parent="RainSet" index="1"]
+position = Vector2( 160, -10 )
+script = ExtResource( 6 )
+
+[node name="DumplingRain" parent="RainSet/Rain2" index="0" instance=ExtResource( 7 )]
+
+[node name="Rain3" type="Node2D" parent="RainSet" index="2"]
+position = Vector2( 300, -10 )
+script = ExtResource( 6 )
+
+[node name="DumplingRain" parent="RainSet/Rain3" index="0" instance=ExtResource( 7 )]
+
+[node name="Rain4" type="Node2D" parent="RainSet" index="3"]
+position = Vector2( 440, -10 )
+script = ExtResource( 6 )
+
+[node name="DumplingRain" parent="RainSet/Rain4" index="0" instance=ExtResource( 7 )]
+
+[node name="Rain5" type="Node2D" parent="RainSet" index="4"]
+position = Vector2( 580, -10 )
+script = ExtResource( 6 )
+
+[node name="DumplingRain" parent="RainSet/Rain5" index="0" instance=ExtResource( 7 )]

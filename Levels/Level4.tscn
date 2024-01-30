@@ -1,0 +1,190 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SceneArea/SceneArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://UI/InfoButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/SceneAreaContainer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/UI/SceneContainer_2.png" type="Texture" id=4]
+
+[node name="Level4" instance=ExtResource( 3 )]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource( 4 )
+
+[node name="SceneArea_1" parent="." index="1" instance=ExtResource( 1 )]
+position = Vector2( 20, 190 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="SceneArea_2" parent="." index="2" instance=ExtResource( 1 )]
+position = Vector2( 660, 190 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="SceneArea_3" parent="." index="3" instance=ExtResource( 1 )]
+position = Vector2( 1300, 190 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="SceneArea_4" parent="." index="4" instance=ExtResource( 1 )]
+position = Vector2( 20, 540 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="SceneArea_5" parent="." index="5" instance=ExtResource( 1 )]
+position = Vector2( 660, 540 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="SceneArea_6" parent="." index="6" instance=ExtResource( 1 )]
+position = Vector2( 1300, 540 )
+scene_area_x = 600
+scene_area_y = 330
+
+[node name="HBoxContainer" parent="UI/HUD/CenterCotainer" index="0"]
+margin_left = 233.0
+margin_top = 23.0
+margin_right = 1646.0
+margin_bottom = 127.0
+
+[node name="LivingRoom" parent="UI/HUD/CenterCotainer/HBoxContainer" index="0" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 104.0
+margin_bottom = 104.0
+info = "客厅"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/LivingRoom" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Bathroom" parent="UI/HUD/CenterCotainer/HBoxContainer" index="1" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 119.0
+margin_right = 223.0
+margin_bottom = 104.0
+info = "卫生间"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Bathroom" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Shop" parent="UI/HUD/CenterCotainer/HBoxContainer" index="2" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 238.0
+margin_right = 342.0
+margin_bottom = 104.0
+info = "商店"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Shop" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="EmptyScene" parent="UI/HUD/CenterCotainer/HBoxContainer" index="3" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 357.0
+margin_right = 461.0
+margin_bottom = 104.0
+info = "Empty"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/EmptyScene" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Forest" parent="UI/HUD/CenterCotainer/HBoxContainer" index="4" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 476.0
+margin_right = 580.0
+margin_bottom = 104.0
+info = "Forest"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Forest" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Windowstill" parent="UI/HUD/CenterCotainer/HBoxContainer" index="5" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 595.0
+margin_right = 699.0
+margin_bottom = 104.0
+info = "窗台"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Windowstill" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Miku" parent="UI/HUD/CenterCotainer/HBoxContainer" index="6" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 714.0
+margin_right = 818.0
+margin_bottom = 104.0
+info = "Miku"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Miku" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Father" parent="UI/HUD/CenterCotainer/HBoxContainer" index="7" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 833.0
+margin_right = 937.0
+margin_bottom = 104.0
+info = "Father"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Father" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Mother" parent="UI/HUD/CenterCotainer/HBoxContainer" index="8" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 952.0
+margin_right = 1056.0
+margin_bottom = 104.0
+info = "Mother"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Mother" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LittleSister" parent="UI/HUD/CenterCotainer/HBoxContainer" index="9" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1071.0
+margin_right = 1175.0
+margin_bottom = 104.0
+info = "LittleSister"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/LittleSister" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Seed" parent="UI/HUD/CenterCotainer/HBoxContainer" index="10" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1190.0
+margin_right = 1294.0
+margin_bottom = 104.0
+info = "Seed"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Seed" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="SpringOnion" parent="UI/HUD/CenterCotainer/HBoxContainer" index="11" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1309.0
+margin_right = 1413.0
+margin_bottom = 104.0
+info = "葱"
+
+[node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/SpringOnion" index="2"]
+anchor_right = 1.0
+anchor_bottom = 1.0

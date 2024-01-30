@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SceneObjects/Items/Item.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SceneObjects/Items/rose.png" type="Texture" id=2]
+[ext_resource path="res://SceneObjects/Items/Rose.gd" type="Script" id=3]
+[ext_resource path="res://Assets/SceneObjects/Items/rose1.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "blink",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 19.0
+height = 60.0
+
+[node name="Rose" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+obj_name = "Rose"
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+animation = "blink"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 2 )

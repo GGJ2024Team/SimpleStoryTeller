@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://SceneObjects/Characters/Character.tscn" type="PackedScene" id=1]
+[ext_resource path="res://SceneObjects/Characters/Audience.gd" type="Script" id=2]
+[ext_resource path="res://Assets/SceneObjects/Characters/audience.png" type="Texture" id=3]
+[ext_resource path="res://Assets/SceneObjects/Characters/audience_hy.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Audience" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" parent="." index="0"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+
+[node name="Audience" type="Sprite" parent="AnimatedSprite" index="0"]
+position = Vector2( -150, 0 )
+texture = ExtResource( 3 )
+
+[node name="AudienceHy" type="Sprite" parent="AnimatedSprite/Audience" index="0"]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="Audience2" type="Sprite" parent="AnimatedSprite" index="1"]
+position = Vector2( 150, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+
+[node name="AudienceHy" type="Sprite" parent="AnimatedSprite/Audience2" index="0"]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="Audience3" type="Sprite" parent="AnimatedSprite" index="2"]
+position = Vector2( -300, 0 )
+texture = ExtResource( 3 )
+
+[node name="AudienceHy" type="Sprite" parent="AnimatedSprite/Audience3" index="0"]
+visible = false
+texture = ExtResource( 4 )
+
+[node name="Audience4" type="Sprite" parent="AnimatedSprite" index="3"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+
+[node name="AudienceHy" type="Sprite" parent="AnimatedSprite/Audience4" index="0"]
+visible = false
+texture = ExtResource( 4 )

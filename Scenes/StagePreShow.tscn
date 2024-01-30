@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/StagePreShow.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Anchor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Scenes/Stage.png" type="Texture" id=4]
+[ext_resource path="res://SceneObjects/Items/Dumpling2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SceneObjects/Items/ClockPreShow.tscn" type="PackedScene" id=6]
+
+[node name="StagePreShow" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+scene_name = "StagePreShow"
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 4 )
+
+[node name="Clock" parent="Sprite" index="0" instance=ExtResource( 6 )]
+position = Vector2( 500, 95 )
+
+[node name="DownPos" parent="Anchors" index="0" instance=ExtResource( 3 )]
+position = Vector2( 266, 232 )
+
+[node name="DumplingPos" parent="Anchors" index="1" instance=ExtResource( 3 )]
+position = Vector2( 464, 235 )
+
+[node name="Dumpling2" parent="Anchors/DumplingPos" index="1" instance=ExtResource( 5 )]
