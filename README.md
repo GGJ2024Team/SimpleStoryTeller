@@ -3,12 +3,12 @@
 
 
 ### Contributors
-- @GKFXCode 实现了代码的整体框架, 设计并实现了部分关卡
+- @vh_wz 实现了代码的整体框架, 设计并实现了部分关卡
 - @gabriel 设计并实现了部分关卡
 - @ZTY 设计并实现了部分关卡
 - @火花骑士 设计并实现了部分关卡
 - @uBGoat 设计并实现了烟花,2D光照,火焰等效果
-- @っ´ω`c） 绘制了关卡中的人物,道具和场景
+- @oxox4312 绘制了关卡中的人物,道具和场景
 
 
 ### 如何运行
@@ -119,4 +119,4 @@ func _update_attr(scene_objects):
 @MateuSai 的项目 https://github.com/MateuSai/Godot-Roguelike-Tutorial/
 
 @Game Development Center 制作的塔防游戏教程 _Make a Tower Defense Game in Godot_
- 
+
