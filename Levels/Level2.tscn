@@ -1,10 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Levels/SceneAreaContainer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://SceneArea/SceneArea.tscn" type="PackedScene" id=2]
 [ext_resource path="res://UI/InfoButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/UI/SceneContainer_2.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fonts/SourceHanSansCN/SubsetOTF/CN/SourceHanSansCN-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/SceneObjects/Characters/wife.png" type="Texture" id=6]
+[ext_resource path="res://Assets/SceneObjects/Characters/husband.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Scenes/company.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Scenes/bus.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Scenes/livingRoom2.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -59,8 +64,12 @@ margin_bottom = 104.0
 info = "LivingRoom2"
 
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/LivingRoom2" index="2"]
-margin_right = 100.0
-margin_bottom = 100.0
+margin_left = 2.0
+margin_top = 3.0
+margin_right = 102.0
+margin_bottom = 103.0
+texture = ExtResource( 10 )
+expand = true
 
 [node name="Bus" parent="UI/HUD/CenterCotainer/HBoxContainer" index="1" instance=ExtResource( 3 )]
 anchor_right = 0.0
@@ -71,8 +80,16 @@ margin_bottom = 104.0
 info = "Bus"
 
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Bus" index="2"]
-margin_right = 100.0
-margin_bottom = 100.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.0
+margin_top = -50.0
+margin_right = 50.0
+margin_bottom = 50.0
+texture = ExtResource( 9 )
+expand = true
 
 [node name="Company" parent="UI/HUD/CenterCotainer/HBoxContainer" index="2" instance=ExtResource( 3 )]
 anchor_right = 0.0
@@ -83,8 +100,12 @@ margin_bottom = 104.0
 info = "Company"
 
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Company" index="2"]
-margin_right = 100.0
-margin_bottom = 100.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 102.0
+margin_bottom = 102.0
+texture = ExtResource( 8 )
+expand = true
 
 [node name="Husband" parent="UI/HUD/CenterCotainer/HBoxContainer" index="3" instance=ExtResource( 3 )]
 anchor_right = 0.0
@@ -97,6 +118,8 @@ info = "Husband"
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Husband" index="2"]
 margin_right = 100.0
 margin_bottom = 100.0
+texture = ExtResource( 7 )
+expand = true
 
 [node name="Wife" parent="UI/HUD/CenterCotainer/HBoxContainer" index="4" instance=ExtResource( 3 )]
 anchor_right = 0.0
@@ -109,6 +132,8 @@ info = "Wife"
 [node name="TextureRect" type="TextureRect" parent="UI/HUD/CenterCotainer/HBoxContainer/Wife" index="2"]
 margin_right = 100.0
 margin_bottom = 100.0
+texture = ExtResource( 6 )
+expand = true
 
 [node name="Label" type="Label" parent="UI/HUD" index="3"]
 margin_left = 77.0

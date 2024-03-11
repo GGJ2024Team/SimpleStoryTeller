@@ -124,6 +124,11 @@ func _update_attr(scene_objects):
 - 名字必须有实际含义
 - 图像等素材都放在`Assets`文件夹中
 
+### 关于美术素材
+整个界面的大小是1920x1080, 四周的Margin为20px
+目前，每个SceneArea的大小是600x330
+人物的高度不超过150px
+
 
 ### THANKS
 
